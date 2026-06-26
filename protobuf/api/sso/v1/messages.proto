@@ -57,13 +57,9 @@ message LoginRequest {
       max_len: 256
     }
   ];
-  int32 app_id = 3
-  [
+  int32 app_id = 3 [
     json_name = "app_id",
-    (buf.validate.field).string = {
-      min_len: 3
-      max_len: 256
-    }
+    (buf.validate.field).int32 = { gte: 1, lte: 10 }
   ];
 }
 
