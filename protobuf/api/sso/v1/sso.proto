@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package github.easymymind.mpm_sso_proto.protobuf.api.sso.v1;
+
+import "api/sso/v1/messages.proto";
+
+option go_package = "pkg/api/v1/sso;ssov1";
+
+service Auth {
+  rpc Register (RegisterRequest) returns (RegisterResponse);
+  rpc Login (LoginRequest) returns (LoginResponse);
+  rpc IsAdmin (IsAdminRequest) returns (IsAdminResponse);
+  rpc Logout (LogoutRequest) returns (LogoutResponse);
+}
+
