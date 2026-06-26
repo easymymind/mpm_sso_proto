@@ -59,7 +59,7 @@ message LoginRequest {
   ];
   int32 app_id = 3 [
     json_name = "app_id",
-    (buf.validate.field).int32 = { gte: 1, lte: 10 }
+    (buf.validate.field).int32 = { gte: 1 }
   ];
 }
 
